@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.UI", "WebBrowser.UI\WebBrowser.UI.csproj", "{CF3F73C8-89F3-4987-A184-7B3016EEB2D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBrowser.Logic", "WebBrowser.Logic\WebBrowser.Logic.csproj", "{27A39433-19D0-4748-B24A-7967BD90BFE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CF3F73C8-89F3-4987-A184-7B3016EEB2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF3F73C8-89F3-4987-A184-7B3016EEB2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF3F73C8-89F3-4987-A184-7B3016EEB2D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27A39433-19D0-4748-B24A-7967BD90BFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27A39433-19D0-4748-B24A-7967BD90BFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27A39433-19D0-4748-B24A-7967BD90BFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27A39433-19D0-4748-B24A-7967BD90BFE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
