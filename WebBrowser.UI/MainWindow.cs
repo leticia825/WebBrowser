@@ -51,5 +51,18 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Well Howdy!\n\nThis web browser was made and is maintained by "
+                + "Leticia Garcia. For Auburn's reference, that's LZG0052. This " 
+                + "is an ongoing project that has a 3-tier design. Feel free to "
+                + "ask me about it. \n\nAs an up-and-coming application developer, I "
+                + "look forward to working in collaborative environments and growing "
+                + "in knowledge and skill. I would love feedback on this project "
+                + "and to engage in new opportunities. \n\nFind me on LinkedIn " 
+                + "or GitHub!\nhttps://www.linkedin.com/in/leticia825"
+                + "\nhttps://github.com/leticia825");
+        }
     }
 }
