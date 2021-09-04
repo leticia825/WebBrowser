@@ -64,5 +64,15 @@ namespace WebBrowser.UI
                 + "or GitHub!\nhttps://www.linkedin.com/in/leticia825"
                 + "\nhttps://github.com/leticia825");
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e) 
+        {
+            //back button. VS won't let me rename 
+        }
+
+        private void ForwardButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
