@@ -21,5 +21,35 @@ namespace WebBrowser.UI
         {
             Application.Exit();
         }
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
