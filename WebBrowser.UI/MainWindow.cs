@@ -100,6 +100,8 @@ namespace WebBrowser.UI
             // GO button. VS won't rename method
             //the WebBrowser control will load the address you entered
 
+            webBrowser1.Navigate(AddressTextbox.ToString());
+
         }
 
         private void AddressTextbox_Click(object sender, EventArgs e)
