@@ -54,23 +54,33 @@ namespace WebBrowser.UI
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Well Howdy!\n\nThis web browser was made and is maintained by "
+            MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained by "
                 + "Leticia Garcia. For Auburn's reference, that's LZG0052. This " 
                 + "is an ongoing project that has a 3-tier design. Feel free to "
                 + "ask me about it. \n\nAs an up-and-coming application developer, I "
                 + "look forward to working in collaborative environments and growing "
                 + "in knowledge and skill. I would love feedback on this project "
                 + "and to engage in new opportunities. \n\nFind me on LinkedIn " 
-                + "or GitHub!\nhttps://www.linkedin.com/in/leticia825"
+                + "and GitHub!\nhttps://www.linkedin.com/in/leticia825"
                 + "\nhttps://github.com/leticia825");
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e) 
         {
-            //back button. VS won't let me rename 
+            //back button. VS won't rename method
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
         {
 
         }
