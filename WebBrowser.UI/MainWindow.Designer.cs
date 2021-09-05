@@ -182,7 +182,7 @@ namespace WebBrowser.UI
             this.BookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(4, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(289, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(328, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -279,6 +279,7 @@ namespace WebBrowser.UI
             this.AddressTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.Size = new System.Drawing.Size(100, 27);
+            this.AddressTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.webAdressBox_KeyDown);
             this.AddressTextbox.Click += new System.EventHandler(this.AddressTextbox_Click);
             // 
             // GoButton

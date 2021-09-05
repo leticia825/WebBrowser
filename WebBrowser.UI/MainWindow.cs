@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WebBrowser.UI
@@ -54,8 +47,8 @@ namespace WebBrowser.UI
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained by "
-                + "Leticia Garcia. For Auburn's reference, that's LZG0052. This " 
+            MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained"
+                + " by Leticia Garcia. For Auburn's reference, that's LZG0052. This "
                 + "is an ongoing project that has a 3-tier design. Feel free to "
                 + "ask me about it. \n\nAs an up-and-coming application developer, I "
                 + "look forward to working in collaborative environments and growing "
@@ -67,7 +60,7 @@ namespace WebBrowser.UI
 
         private void toolStripButton1_Click(object sender, EventArgs e) 
         {
-            //back button. VS won't rename method
+            ////// BACK BUTTON. VS WON'T RENAME METHOD //////
         }
 
         private void ForwardButton_Click(object sender, EventArgs e)
@@ -97,8 +90,7 @@ namespace WebBrowser.UI
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            // GO button. VS won't rename method
-            //the WebBrowser control will load the address you entered
+            ////// GO BUTTON. VS WON'T RENAME METHOD //////
 
             webBrowser1.Navigate(AddressTextbox.ToString());
 
@@ -106,13 +98,22 @@ namespace WebBrowser.UI
 
         private void AddressTextbox_Click(object sender, EventArgs e)
         {
-            //when you enter a URL and press Enter, the WebBrowser
-            //control will load the address you entered
+
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            //is white space inside TabPage
+            //is the white space inside TabPage
+        }
+
+        private void webAdressBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //Execute GO BUTTON; but here just copied the code instead of calling method
+                webBrowser1.Navigate(AddressTextbox.ToString());
+
+            }
         }
     }
 }
