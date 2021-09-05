@@ -50,6 +50,7 @@ namespace WebBrowser.UI
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.RefreshButton = new System.Windows.Forms.ToolStripButton();
             this.HomeButton = new System.Windows.Forms.ToolStripButton();
+            this.BookmarkButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -169,10 +170,11 @@ namespace WebBrowser.UI
             this.BackButton,
             this.ForwardButton,
             this.RefreshButton,
-            this.HomeButton});
+            this.HomeButton,
+            this.BookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(4, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(168, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(197, 31);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -182,7 +184,7 @@ namespace WebBrowser.UI
             this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
             this.BackButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(29, 24);
+            this.BackButton.Size = new System.Drawing.Size(29, 28);
             this.BackButton.Text = "Go Back";
             this.BackButton.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -192,7 +194,7 @@ namespace WebBrowser.UI
             this.ForwardButton.Image = ((System.Drawing.Image)(resources.GetObject("ForwardButton.Image")));
             this.ForwardButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.ForwardButton.Name = "ForwardButton";
-            this.ForwardButton.Size = new System.Drawing.Size(29, 24);
+            this.ForwardButton.Size = new System.Drawing.Size(29, 28);
             this.ForwardButton.Text = "Go Forward";
             this.ForwardButton.Click += new System.EventHandler(this.ForwardButton_Click);
             // 
@@ -218,7 +220,7 @@ namespace WebBrowser.UI
             this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
             this.RefreshButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(29, 24);
+            this.RefreshButton.Size = new System.Drawing.Size(29, 28);
             this.RefreshButton.Text = "Refresh Page";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
@@ -228,9 +230,19 @@ namespace WebBrowser.UI
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(29, 24);
+            this.HomeButton.Size = new System.Drawing.Size(29, 28);
             this.HomeButton.Text = "Go Home";
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // BookmarkButton
+            // 
+            this.BookmarkButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("BookmarkButton.Image")));
+            this.BookmarkButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
+            this.BookmarkButton.Name = "BookmarkButton";
+            this.BookmarkButton.Size = new System.Drawing.Size(29, 28);
+            this.BookmarkButton.Text = "Bookmark";
+            this.BookmarkButton.Click += new System.EventHandler(this.BookmarkButton_Click);
             // 
             // MainWindow
             // 
@@ -277,5 +289,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ToolStripButton ForwardButton;
         private System.Windows.Forms.ToolStripButton RefreshButton;
         private System.Windows.Forms.ToolStripButton HomeButton;
+        private System.Windows.Forms.ToolStripButton BookmarkButton;
     }
 }

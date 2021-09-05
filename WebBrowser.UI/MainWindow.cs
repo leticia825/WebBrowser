@@ -84,5 +84,10 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void BookmarkButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
