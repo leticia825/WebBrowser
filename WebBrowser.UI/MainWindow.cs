@@ -89,5 +89,23 @@ namespace WebBrowser.UI
         {
 
         }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            // GO button. VS won't rename method
+            //the WebBrowser control will load the address you entered
+
+        }
+
+        private void AddressTextbox_Click(object sender, EventArgs e)
+        {
+            //when you enter a URL and press Enter, the WebBrowser
+            //control will load the address you entered
+        }
     }
 }
