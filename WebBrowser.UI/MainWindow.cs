@@ -107,5 +107,10 @@ namespace WebBrowser.UI
             //when you enter a URL and press Enter, the WebBrowser
             //control will load the address you entered
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            //is white space inside TabPage
+        }
     }
 }

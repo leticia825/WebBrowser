@@ -55,11 +55,13 @@ namespace WebBrowser.UI
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.AddressTextbox = new System.Windows.Forms.ToolStripTextBox();
             this.GoButton = new System.Windows.Forms.ToolStripButton();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -262,6 +264,7 @@ namespace WebBrowser.UI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.webBrowser1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -287,6 +290,16 @@ namespace WebBrowser.UI
             this.GoButton.Text = "Go to website";
             this.GoButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(774, 427);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -307,6 +320,7 @@ namespace WebBrowser.UI
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +353,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ToolStripButton GoButton;
         private System.Windows.Forms.ToolStripTextBox AddressTextbox;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
