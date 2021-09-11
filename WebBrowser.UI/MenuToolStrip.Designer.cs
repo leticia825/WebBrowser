@@ -67,6 +67,7 @@ namespace WebBrowser.UI
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(29, 24);
             this.BackButton.Text = "Go Back";
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // ForwardButton
             // 
@@ -74,7 +75,7 @@ namespace WebBrowser.UI
             this.ForwardButton.Image = ((System.Drawing.Image)(resources.GetObject("ForwardButton.Image")));
             this.ForwardButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.ForwardButton.Name = "ForwardButton";
-            this.ForwardButton.Size = new System.Drawing.Size(29, 28);
+            this.ForwardButton.Size = new System.Drawing.Size(29, 24);
             this.ForwardButton.Text = "Go Forward";
             // 
             // RefreshButton
@@ -93,7 +94,7 @@ namespace WebBrowser.UI
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(29, 28);
+            this.HomeButton.Size = new System.Drawing.Size(29, 24);
             this.HomeButton.Text = "Go Home";
             // 
             // AddressTextbox
@@ -110,7 +111,7 @@ namespace WebBrowser.UI
             this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
             this.GoButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(29, 28);
+            this.GoButton.Size = new System.Drawing.Size(29, 24);
             this.GoButton.Text = "Go to website";
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
@@ -120,7 +121,7 @@ namespace WebBrowser.UI
             this.BookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("BookmarkButton.Image")));
             this.BookmarkButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.BookmarkButton.Name = "BookmarkButton";
-            this.BookmarkButton.Size = new System.Drawing.Size(29, 28);
+            this.BookmarkButton.Size = new System.Drawing.Size(29, 24);
             this.BookmarkButton.Text = "Bookmark";
             // 
             // webBrowser1

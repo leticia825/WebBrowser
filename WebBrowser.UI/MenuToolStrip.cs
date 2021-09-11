@@ -60,5 +60,14 @@ namespace WebBrowser.UI
                 webBrowser1.Navigate(AddressTextbox.Text);
             }
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            if (webBrowser1.CanGoBack)
+            {
+                webBrowser1.GoBack();
+            }
+                
+        }
     }
 }
