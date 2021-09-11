@@ -69,5 +69,11 @@ namespace WebBrowser.UI
             }
                 
         }
+
+        private void ForwardButton_Click(object sender, EventArgs e)
+        {
+            if (webBrowser1.CanGoForward)
+                webBrowser1.GoForward();
+        }
     }
 }

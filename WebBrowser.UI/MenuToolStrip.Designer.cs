@@ -77,6 +77,7 @@ namespace WebBrowser.UI
             this.ForwardButton.Name = "ForwardButton";
             this.ForwardButton.Size = new System.Drawing.Size(29, 24);
             this.ForwardButton.Text = "Go Forward";
+            this.ForwardButton.Click += new System.EventHandler(this.ForwardButton_Click);
             // 
             // RefreshButton
             // 
