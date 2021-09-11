@@ -44,7 +44,8 @@ namespace WebBrowser.UI
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-
+            webBrowser1.Refresh();
+            //MessageBox.Show("refreshed");
         }
 
         private void AddressTextbox_Click(object sender, EventArgs e)
