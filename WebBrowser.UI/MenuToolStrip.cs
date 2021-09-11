@@ -48,11 +48,6 @@ namespace WebBrowser.UI
             //MessageBox.Show("refreshed");
         }
 
-        private void AddressTextbox_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddressTextbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -74,6 +69,11 @@ namespace WebBrowser.UI
         {
             if (webBrowser1.CanGoForward)
                 webBrowser1.GoForward();
+        }
+
+        private void AddressTextbox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
