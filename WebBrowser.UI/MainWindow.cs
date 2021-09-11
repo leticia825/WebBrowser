@@ -11,30 +11,44 @@ namespace WebBrowser.UI
             
         }
 
-        private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit(); ////////////////////////////////////////////////////////////////////////////////
+            this.tabControl2.TabPages.Add(new TabPage("New Tab"));
         }
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ////// GO BUTTON. VS WON'T RENAME METHOD //////
-
-            //webBrowser1.Navigate(AddressTextbox.ToString());
-
+            this.tabControl2.TabPages.RemoveAt(this.tabControl2.SelectedIndex);
         }
 
-        private void webAdressBox_KeyDown(object sender, KeyEventArgs e)
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.Control && (e.KeyCode == Keys.T))
             {
-                //Execute GO BUTTON; but here just copied the code instead of calling method
-                //webBrowser1.Navigate(AddressTextbox.ToString());
+                newTabToolStripMenuItem_Click(sender, e);
+            }
 
+            if (e.Control && (e.KeyCode == Keys.W))
+            {
+                closeCurrentTabToolStripMenuItem_Click(sender, e);
             }
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)///////////////////////////////////////////////
+        private void menuStrip1_KeyDown(object sender, KeyEventArgs e)
+        {
+            MainWindow_KeyDown(sender, e);  //don't think this is needed, really
+        }
+
+        private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained"
                 + " by Leticia Garcia. For Auburn's reference, that's LZG0052. This "
@@ -47,9 +61,23 @@ namespace WebBrowser.UI
                 + "\nhttps://github.com/leticia825");
         }
 
+        ////////////////////////////////////
+        /////// Empty methods below ////////
+
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ////// BACK BUTTON. VS WON'T RENAME METHOD //////
+        }
+
+        private void webAdressBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -58,16 +86,6 @@ namespace WebBrowser.UI
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -126,5 +144,7 @@ namespace WebBrowser.UI
         {
            
         }
+
+
     }
 }

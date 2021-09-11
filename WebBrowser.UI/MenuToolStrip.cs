@@ -12,7 +12,7 @@ namespace WebBrowser.UI
 {
     public partial class MenuToolStrip : UserControl
     {
-
+        //MessageBox.Show("refreshed");
 
         public MenuToolStrip()
         {
@@ -39,20 +39,25 @@ namespace WebBrowser.UI
 
         private void GoButton_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(AddressTextbox.Text) || AddressTextbox.Text.Equals("about:blank"))
+            {
+                MessageBox.Show("Trying that null out, huh. Try again.");
+                AddressTextbox.Focus();
+                return;
+            }
             webBrowser1.Navigate(AddressTextbox.ToString());
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             webBrowser1.Refresh();
-            //MessageBox.Show("refreshed");
         }
 
         private void AddressTextbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                webBrowser1.Navigate(AddressTextbox.Text);
+                GoButton_Click(sender, e);
             }
         }
 
