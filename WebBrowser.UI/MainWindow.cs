@@ -11,13 +11,17 @@ namespace WebBrowser.UI
             
         }
 
-
-
-
+        MenuToolStrip m = new MenuToolStrip();
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.tabControl2.TabPages.Add(new TabPage("New Tab"));
+
+            MenuToolStrip a = new MenuToolStrip();
+            a.Dock = DockStyle.Fill;
+            TabPage x = new TabPage("Another One");
+            x.Controls.Add(a);
+            tabControl2.TabPages.Add(x);
+
         }
 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +64,7 @@ namespace WebBrowser.UI
                 + "and GitHub!\nhttps://www.linkedin.com/in/leticia825"
                 + "\nhttps://github.com/leticia825");
         }
+
 
         ////////////////////////////////////
         /////// Empty methods below ////////
