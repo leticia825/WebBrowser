@@ -19,7 +19,7 @@ namespace WebBrowser.Logic
         public static List<HistoryItem> GetItem()
         {
             var adapter = new HistoryTableAdapter();
-            var results = new List<HistoryItem>();
+            var result = new List<HistoryItem>();
             var rows = adapter.GetData();
 
             foreach(var row in rows)
@@ -29,10 +29,10 @@ namespace WebBrowser.Logic
                 item.Title = row.Title;
                 item.Date = row.Date;
 
-                results.Add(item);
+                result.Add(item);
             }
 
-            return results;
+            return result;
         }
     }
 }
