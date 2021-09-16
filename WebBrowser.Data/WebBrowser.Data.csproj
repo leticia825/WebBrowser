@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookmarksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookmarksDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="HistoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -92,6 +97,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="BookmarksDataSet.xsc">
+      <DependentUpon>BookmarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookmarksDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookmarksDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BookmarksDataSet.xss">
+      <DependentUpon>BookmarksDataSet.xsd</DependentUpon>
+    </None>
     <None Include="HistoryDataSet.xsc">
       <DependentUpon>HistoryDataSet.xsd</DependentUpon>
     </None>
