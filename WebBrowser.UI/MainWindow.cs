@@ -52,6 +52,12 @@ namespace WebBrowser.UI
             Application.Exit();
         }
 
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var itemForm = new BookmarkManagerForm();
+            itemForm.ShowDialog();
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained"
@@ -110,10 +116,7 @@ namespace WebBrowser.UI
 
         }
 
-        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {

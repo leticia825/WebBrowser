@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
@@ -79,5 +80,19 @@ namespace WebBrowser.UI
 
         }
 
+        private void BookmarkButton_Click(object sender, EventArgs e)
+        {
+
+            var item = new BookmarkItem();
+            item.URL = AddressTextbox.Text;
+            item.Title = webBrowser1.Document.Title;
+
+            BookmarkManager.AddItem(item);
+
+            // not sure if  i need to clear. video shows this:
+            item.URL = "";
+            item.Title = "";
+
+        }
     }
 }
