@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebBrowser.Data.BookmarksDataSetTableAdapters;
+using WebBrowser.Data.BookmarksDataSetTableAdapters; 
 
 namespace WebBrowser.Logic
 {
@@ -11,6 +11,11 @@ namespace WebBrowser.Logic
     {
         public static void AddItem(BookmarkItem item)
         {
+            if (GetItems().Any(a => a.URL == item.URL))
+            {
+                return; //do not add
+            }
+
             var adapter = new BookmarksTableAdapter();
             adapter.Insert(item.URL, item.Title);
         }

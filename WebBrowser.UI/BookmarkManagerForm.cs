@@ -20,9 +20,9 @@ namespace WebBrowser.UI
 
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
-            BookmarkListBox.Items.Clear();///////video has this below var item =;
+            
             var items = BookmarkManager.GetItems();
-
+            BookmarkListBox.Items.Clear();///////video has this below var item =;
 
             foreach (var item in items)
             {
