@@ -7,21 +7,18 @@ namespace WebBrowser.UI
     {
         public MainWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent(); 
         }
 
         MenuToolStrip m = new MenuToolStrip();
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             MenuToolStrip a = new MenuToolStrip();
             a.Dock = DockStyle.Fill;
             TabPage x = new TabPage("Another One");
             x.Controls.Add(a);
             tabControl2.TabPages.Add(x);
-
         }
 
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,6 +55,12 @@ namespace WebBrowser.UI
             itemForm.ShowDialog();
         }
 
+        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var itemForm = new HistoryManagerForm();
+            itemForm.ShowDialog();
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained"
@@ -76,24 +79,26 @@ namespace WebBrowser.UI
         /////// Empty methods below ////////
 
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ////// BACK BUTTON. VS WON'T RENAME METHOD //////
         }
 
-        private void webAdressBox_KeyDown(object sender, KeyEventArgs e)
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            //is the white space inside TabPage
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private void webAdressBox_KeyDown(object sender, KeyEventArgs e)
         {
-            //is the white space inside TabPage
+
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,13 +115,6 @@ namespace WebBrowser.UI
         {
 
         }
-
-        private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         private void ForwardButton_Click(object sender, EventArgs e)
         {

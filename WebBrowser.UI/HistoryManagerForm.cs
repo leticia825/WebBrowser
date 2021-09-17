@@ -20,11 +20,11 @@ namespace WebBrowser.UI
 
         private void HistoryManagerForm_Load(object sender, EventArgs e)
         {
-            HistoryListBox.Items.Clear();///////video has this below var item =;
             var items = HistoryManager.GetItem();
-            
+            HistoryListBox.Items.Clear();
 
-            foreach(var item in items)
+
+            foreach (var item in items)
             {
                 HistoryListBox.Items.Add(string.Format
                     ("{0}  {1}   {2}", item.Date.ToString(), item.Title, item.URL));

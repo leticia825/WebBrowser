@@ -94,5 +94,19 @@ namespace WebBrowser.UI
             item.Title = "";
 
         }
+        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            var item = new HistoryItem();
+            item.Date = DateTime.Now;
+            item.URL = AddressTextbox.Text;
+            item.Title = webBrowser1.Document.Title;
+
+            HistoryManager.AddItem(item);
+
+            // How to clear time? What a concept. DateTime is non-nullable.
+            item.URL = "";
+            item.Title = "";
+
+        }
     }
 }

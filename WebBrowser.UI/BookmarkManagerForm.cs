@@ -22,7 +22,7 @@ namespace WebBrowser.UI
         {
             
             var items = BookmarkManager.GetItems();
-            BookmarkListBox.Items.Clear();///////video has this below var item =;
+            BookmarkListBox.Items.Clear();
 
             foreach (var item in items)
             {
