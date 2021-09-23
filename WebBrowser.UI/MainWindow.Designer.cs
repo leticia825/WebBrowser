@@ -131,14 +131,14 @@ namespace WebBrowser.UI
             // manageHistoryToolStripMenuItem
             // 
             this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.manageHistoryToolStripMenuItem.Text = "Manage &History";
             this.manageHistoryToolStripMenuItem.Click += new System.EventHandler(this.manageHistoryToolStripMenuItem_Click);
             // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.manageBookmarksToolStripMenuItem.Text = "Manage &Bookmarks";
             this.manageBookmarksToolStripMenuItem.Click += new System.EventHandler(this.manageBookmarksToolStripMenuItem_Click);
             // 
@@ -181,10 +181,10 @@ namespace WebBrowser.UI
             // 
             // menuToolStrip4
             // 
-            this.menuToolStrip4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuToolStrip4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuToolStrip4.Location = new System.Drawing.Point(3, 3);
             this.menuToolStrip4.Name = "menuToolStrip4";
-            this.menuToolStrip4.Size = new System.Drawing.Size(1069, 495);
+            this.menuToolStrip4.Size = new System.Drawing.Size(1069, 529);
             this.menuToolStrip4.TabIndex = 0;
             this.menuToolStrip4.Load += new System.EventHandler(this.menuToolStrip4_Load);
             // 

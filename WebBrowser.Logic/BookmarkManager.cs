@@ -9,15 +9,27 @@ namespace WebBrowser.Logic
 {
     public class BookmarkManager
     {
+        
         public static void AddItem(BookmarkItem item)
         {
-            if (GetItems().Any(a => a.URL == item.URL))
+            try
             {
-                return; //do not add
+                if (GetItems().Any(a => a.URL == item.URL))
+                {
+                    if (GetItems().Any(a => a.Title == item.Title))
+                    {
+                        return; //do not add
+                    }
+                }
+
+                var adapter = new BookmarksTableAdapter();
+                adapter.Insert(item.URL, item.Title);
             }
 
-            var adapter = new BookmarksTableAdapter();
-            adapter.Insert(item.URL, item.Title);
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         public static List<BookmarkItem> GetItems() 

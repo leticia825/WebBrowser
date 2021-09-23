@@ -135,6 +135,7 @@ namespace WebBrowser.UI
             this.webBrowser1.Size = new System.Drawing.Size(953, 468);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
+            this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
             // 
             // MenuToolStrip
             // 

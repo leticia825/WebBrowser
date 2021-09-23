@@ -12,8 +12,25 @@ namespace WebBrowser.Logic
 
         public static void AddItem(HistoryItem item)
         {
-            var adapter = new HistoryTableAdapter();
-            adapter.Insert(item.URL, item.Title, item.Date);
+            try
+            {
+                if ((GetItem().Count > 0) )
+                {
+                    if (GetItem().Last().URL == item.URL &&
+                        GetItem().Last().Title == item.Title)
+                    {
+                        return;
+                    }
+                }
+
+                var adapter = new HistoryTableAdapter();
+                adapter.Insert(item.URL, item.Title, item.Date);
+            }
+
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         public static List<HistoryItem> GetItem()
