@@ -13,7 +13,7 @@ namespace WebBrowser.UI
 {
     public partial class MenuToolStrip : UserControl
     {
-        
+
         public MenuToolStrip()
         {
             InitializeComponent();
@@ -95,9 +95,8 @@ namespace WebBrowser.UI
         }
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
-           
 
-            var item = new HistoryItem();
+             var item = new HistoryItem();
             item.Date = DateTime.Now;
             item.URL = AddressTextbox.Text;  
             item.Title = webBrowser1.Document.Title;
@@ -109,12 +108,34 @@ namespace WebBrowser.UI
             // How to clear time? What a concept. DateTime is non-nullable.
             item.URL = "";
             item.Title = "";
+        }
+
+        private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            if (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum)
+            {
+                toolStripStatusLabel1.Text = "Loading";
+                while (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum)
+                {
+                    this.toolStripProgressBar1.Value++;
+                }
+            }
+
+            else
+            {
+                toolStripStatusLabel1.Text = "Done";
+                this.toolStripProgressBar1.Value = 0;
+            }
+            return;
 
         }
 
+
+
+
+
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
-            
         }
     }
 }

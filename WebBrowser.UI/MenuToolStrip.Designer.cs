@@ -59,7 +59,7 @@ namespace WebBrowser.UI
             this.BookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(953, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(953, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -69,7 +69,7 @@ namespace WebBrowser.UI
             this.BackButton.Image = ((System.Drawing.Image)(resources.GetObject("BackButton.Image")));
             this.BackButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(29, 28);
+            this.BackButton.Size = new System.Drawing.Size(29, 24);
             this.BackButton.Text = "Go Back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
@@ -133,13 +133,14 @@ namespace WebBrowser.UI
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 31);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 27);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(953, 464);
+            this.webBrowser1.Size = new System.Drawing.Size(953, 468);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
+            this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
             // 
             // statusStrip1
             // 
@@ -155,14 +156,14 @@ namespace WebBrowser.UI
             // 
             // toolStripProgressBar1
             // 
+            this.toolStripProgressBar1.Maximum = 5;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 18);
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(63, 20);
-            this.toolStripStatusLabel1.Text = "Loading";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 20);
             // 
             // MenuToolStrip
             // 
