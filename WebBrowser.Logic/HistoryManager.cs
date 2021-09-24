@@ -40,13 +40,9 @@ namespace WebBrowser.Logic
             var rows = adapter.GetData();
 
             foreach(var row in rows) 
-                ////// in 22.08 will fix exception soon 27:55
-                ////// click-highlight (not open, change properties Copy to Output Directory = Do not copy/ rebuid solution
-                ////// and change setting/path in .Data connection string. path replace DataDirectoy word to Debug path
-               /// follow - up video:
             {
                 var item = new HistoryItem();
-                item.ID = row.Id;  //////shaffer video
+                item.ID = row.Id;
                 item.URL = row.URL;
                 item.Title = row.Title;
                 item.Date = row.Date;
@@ -57,10 +53,11 @@ namespace WebBrowser.Logic
             return result;
         }
 
-        //public void DeleteHistoryItem(HistoryItem item) //////shaffer video 24:15 - 26.24 & 33:30
-        //{
-        //    var adapter = new HistoryTableAdapter();
-        //}
+        public void DeleteHistoryItem(HistoryItem item) //////shaffer video 24:15 - 26.24 & 33:30
+        {
+            var adapter = new HistoryTableAdapter();
+            //adapter.DeleteH(item, ID); ///make own see video
+        }
 
 
 

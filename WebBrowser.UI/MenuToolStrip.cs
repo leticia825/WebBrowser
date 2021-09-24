@@ -103,7 +103,10 @@ namespace WebBrowser.UI
 
             HistoryManager.AddItem(item);
 
-            //AddressTextbox.Text = webBrowser1.Url.ToString();  UPDATES ADDRESSTEXBOX BUT BREAKS SYSTEM
+            //try { AddressTextbox.Text = webBrowser1.Url.ToString(); }
+            //catch (Exception nu) { return; }
+            // UPDATES ADDRESSTEXTBOX BUT BREAKS: System.Data.ConstraintException on BookmarkButton_Click
+
 
             // How to clear time? What a concept. DateTime is non-nullable.
             item.URL = "";

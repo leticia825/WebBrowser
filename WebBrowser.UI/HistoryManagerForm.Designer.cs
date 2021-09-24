@@ -30,7 +30,7 @@ namespace WebBrowser.UI
         private void InitializeComponent()
         {
             this.HistoryListBox = new System.Windows.Forms.ListBox();
-            this.SearchHistoryTextbox = new System.Windows.Forms.TextBox();
+            this.SearchHistoryTextBox = new System.Windows.Forms.TextBox();
             this.SearchHistoryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,21 +44,22 @@ namespace WebBrowser.UI
             this.HistoryListBox.Size = new System.Drawing.Size(800, 450);
             this.HistoryListBox.TabIndex = 0;
             // 
-            // SearchHistoryTextbox
+            // SearchHistoryTextBox
             // 
-            this.SearchHistoryTextbox.Location = new System.Drawing.Point(421, 13);
-            this.SearchHistoryTextbox.Name = "SearchHistoryTextbox";
-            this.SearchHistoryTextbox.Size = new System.Drawing.Size(208, 22);
-            this.SearchHistoryTextbox.TabIndex = 1;
+            this.SearchHistoryTextBox.Location = new System.Drawing.Point(580, 405);
+            this.SearchHistoryTextBox.Name = "SearchHistoryTextBox";
+            this.SearchHistoryTextBox.Size = new System.Drawing.Size(208, 22);
+            this.SearchHistoryTextBox.TabIndex = 1;
             // 
             // SearchHistoryButton
             // 
-            this.SearchHistoryButton.Location = new System.Drawing.Point(636, 11);
+            this.SearchHistoryButton.Location = new System.Drawing.Point(499, 405);
             this.SearchHistoryButton.Name = "SearchHistoryButton";
             this.SearchHistoryButton.Size = new System.Drawing.Size(75, 23);
             this.SearchHistoryButton.TabIndex = 2;
             this.SearchHistoryButton.Text = "Search";
             this.SearchHistoryButton.UseVisualStyleBackColor = true;
+            this.SearchHistoryButton.Click += new System.EventHandler(this.SearchHistoryButton_Click);
             // 
             // HistoryManagerForm
             // 
@@ -66,7 +67,7 @@ namespace WebBrowser.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SearchHistoryButton);
-            this.Controls.Add(this.SearchHistoryTextbox);
+            this.Controls.Add(this.SearchHistoryTextBox);
             this.Controls.Add(this.HistoryListBox);
             this.Name = "HistoryManagerForm";
             this.Text = "HistoryManagerForm";
@@ -79,7 +80,7 @@ namespace WebBrowser.UI
         #endregion
 
         private System.Windows.Forms.ListBox HistoryListBox;
-        private System.Windows.Forms.TextBox SearchHistoryTextbox;
+        private System.Windows.Forms.TextBox SearchHistoryTextBox;
         private System.Windows.Forms.Button SearchHistoryButton;
     }
 }
