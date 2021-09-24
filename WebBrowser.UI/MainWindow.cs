@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace WebBrowser.UI
 {
     public partial class MainWindow : Form

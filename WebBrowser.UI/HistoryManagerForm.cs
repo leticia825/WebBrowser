@@ -18,11 +18,10 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        private void HistoryManagerForm_Load(object sender, EventArgs e)
+        public void HistoryManagerForm_Load(object sender, EventArgs e) /////previously private
         {
             var items = HistoryManager.GetItem();
             HistoryListBox.Items.Clear();
-
 
             foreach (var item in items)
             {
