@@ -32,6 +32,7 @@ namespace WebBrowser.UI
             this.HistoryListBox = new System.Windows.Forms.ListBox();
             this.SearchHistoryTextBox = new System.Windows.Forms.TextBox();
             this.SearchHistoryButton = new System.Windows.Forms.Button();
+            this.DeleteHistoryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HistoryListBox
@@ -61,11 +62,22 @@ namespace WebBrowser.UI
             this.SearchHistoryButton.UseVisualStyleBackColor = true;
             this.SearchHistoryButton.Click += new System.EventHandler(this.SearchHistoryButton_Click);
             // 
+            // DeleteHistoryButton
+            // 
+            this.DeleteHistoryButton.Location = new System.Drawing.Point(25, 404);
+            this.DeleteHistoryButton.Name = "DeleteHistoryButton";
+            this.DeleteHistoryButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteHistoryButton.TabIndex = 3;
+            this.DeleteHistoryButton.Text = "Delete";
+            this.DeleteHistoryButton.UseVisualStyleBackColor = true;
+            this.DeleteHistoryButton.Click += new System.EventHandler(this.DeleteHistoryButton_Click);
+            // 
             // HistoryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DeleteHistoryButton);
             this.Controls.Add(this.SearchHistoryButton);
             this.Controls.Add(this.SearchHistoryTextBox);
             this.Controls.Add(this.HistoryListBox);
@@ -82,5 +94,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ListBox HistoryListBox;
         private System.Windows.Forms.TextBox SearchHistoryTextBox;
         private System.Windows.Forms.Button SearchHistoryButton;
+        private System.Windows.Forms.Button DeleteHistoryButton;
     }
 }

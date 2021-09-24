@@ -21,7 +21,6 @@ namespace WebBrowser.UI
 
         private void HistoryManagerForm_Load(object sender, EventArgs e) 
         {
-            
             var items = HistoryManager.GetItem(); 
             HistoryListBox.Items.Clear();
 
@@ -29,9 +28,7 @@ namespace WebBrowser.UI
             {
                 HistoryListBox.Items.Add(string.Format
                     ("{0}  {1}   {2}", item.Date.ToString(), item.Title, item.URL));
-
             }
-
         }
 
         private void SearchHistoryButton_Click(object sender, EventArgs e)
@@ -45,5 +42,21 @@ namespace WebBrowser.UI
                 }
             }
         }
-    }
+
+        private void DeleteHistoryButton_Click(object sender, EventArgs e)
+        {
+            if (HistoryListBox.Items.Count <= 0)
+            {
+                MessageBox.Show("Nothing to delete.");
+                return;
+            }
+
+            var h = HistoryManager.GetItem();
+            HistoryManager.DeleteHistoryItem(h[HistoryListBox.SelectedIndex]);
+            HistoryManagerForm_Load(sender, e); 
+        } 
+
+
+    }//end partial
 }
+

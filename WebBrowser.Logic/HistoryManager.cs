@@ -9,7 +9,6 @@ namespace WebBrowser.Logic
 {
     public class HistoryManager
     {
-
         public static void AddItem(HistoryItem item)
         {
             try
@@ -26,10 +25,9 @@ namespace WebBrowser.Logic
                 var adapter = new HistoryTableAdapter();
                 adapter.Insert(item.URL, item.Title, item.Date);
             }
-
             catch (Exception ex)
-            {
-                return;
+            { 
+                return; 
             }
         }
 
@@ -53,12 +51,22 @@ namespace WebBrowser.Logic
             return result;
         }
 
-        public void DeleteHistoryItem(HistoryItem item) //////shaffer video 24:15 - 26.24 & 33:30
+        public static void DeleteHistoryItem(HistoryItem item) 
         {
             var adapter = new HistoryTableAdapter();
-            //adapter.DeleteH(item, ID); ///make own see video
+            
+            //created DeleteHistory method from HistoryDataSet
+            adapter.DeleteHistory(item.ID);
         }
 
+
+        //public void DeleteHistoryAll() //no params needed right?
+        //{
+        //    foreach(var item in GetItem()) 
+        //    {
+        //        DeleteHistoryItem(item);
+        //    }
+        //}
 
 
     }
