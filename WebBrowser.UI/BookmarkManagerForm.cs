@@ -30,5 +30,16 @@ namespace WebBrowser.UI
                     ("{0}  {1}", item.Title, item.URL));
             }
         }
+
+        private void SearchBookmarkButton_Click(object sender, EventArgs e)
+        {
+            for (int i = BookmarkListBox.Items.Count - 1; i >= 0; --i)
+            {
+                if (!(BookmarkListBox.Items[i].ToString().ToLower().Contains(SearchBookmarkTextBox.Text.ToLower())))
+                {
+                    BookmarkListBox.Items.RemoveAt(i);
+                }
+            }
+        }
     }
 }
