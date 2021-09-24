@@ -18,7 +18,7 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        public void HistoryManagerForm_Load(object sender, EventArgs e) /////previously private
+        public void HistoryManagerForm_Load(object sender, EventArgs e) /////previously private////////////////
         {
             var items = HistoryManager.GetItem();
             HistoryListBox.Items.Clear();
