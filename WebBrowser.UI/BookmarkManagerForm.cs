@@ -41,5 +41,24 @@ namespace WebBrowser.UI
                 }
             }
         }
+
+        private void DeleteBookmarkButton_Click(object sender, EventArgs e)
+        {
+            if (BookmarkListBox.Items.Count <= 0) //nothing listed
+            {
+                MessageBox.Show("Nothing to delete.");
+                return;
+            }
+
+            if (BookmarkListBox.SelectedIndex == -1) //nothing selected
+            {
+                MessageBox.Show("Nothing selected to delete.");
+                return;
+            }
+
+            var b = BookmarkManager.GetItems();
+            BookmarkManager.DeleteBookmarkItem(b[BookmarkListBox.SelectedIndex]);
+            BookmarkManagerForm_Load(sender, e);
+        }
     }
 }

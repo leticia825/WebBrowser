@@ -32,6 +32,7 @@ namespace WebBrowser.UI
             this.BookmarkListBox = new System.Windows.Forms.ListBox();
             this.SearchBookmarkTextBox = new System.Windows.Forms.TextBox();
             this.SearchBookmarkButton = new System.Windows.Forms.Button();
+            this.DeleteBookmarkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BookmarkListBox
@@ -62,11 +63,22 @@ namespace WebBrowser.UI
             this.SearchBookmarkButton.UseVisualStyleBackColor = true;
             this.SearchBookmarkButton.Click += new System.EventHandler(this.SearchBookmarkButton_Click);
             // 
+            // DeleteBookmarkButton
+            // 
+            this.DeleteBookmarkButton.Location = new System.Drawing.Point(681, 90);
+            this.DeleteBookmarkButton.Name = "DeleteBookmarkButton";
+            this.DeleteBookmarkButton.Size = new System.Drawing.Size(107, 23);
+            this.DeleteBookmarkButton.TabIndex = 3;
+            this.DeleteBookmarkButton.Text = "Delete";
+            this.DeleteBookmarkButton.UseVisualStyleBackColor = true;
+            this.DeleteBookmarkButton.Click += new System.EventHandler(this.DeleteBookmarkButton_Click);
+            // 
             // BookmarkManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DeleteBookmarkButton);
             this.Controls.Add(this.SearchBookmarkButton);
             this.Controls.Add(this.SearchBookmarkTextBox);
             this.Controls.Add(this.BookmarkListBox);
@@ -83,5 +95,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.ListBox BookmarkListBox;
         private System.Windows.Forms.TextBox SearchBookmarkTextBox;
         private System.Windows.Forms.Button SearchBookmarkButton;
+        private System.Windows.Forms.Button DeleteBookmarkButton;
     }
 }

@@ -9,7 +9,6 @@ namespace WebBrowser.Logic
 {
     public class BookmarkManager
     {
-        
         public static void AddItem(BookmarkItem item)
         {
             try
@@ -41,6 +40,7 @@ namespace WebBrowser.Logic
             foreach (var row in rows)
             {
                 var item = new BookmarkItem();
+                item.ID = row.Id;
                 item.URL = row.URL;
                 item.Title = row.Title;
 
@@ -48,6 +48,14 @@ namespace WebBrowser.Logic
             }
 
             return result;
+        }
+
+        public static void DeleteBookmarkItem(BookmarkItem item)
+        {
+            var adapter = new BookmarksTableAdapter();
+
+            //created DeleteBookmark method from BookmarkDataSet
+            adapter.DeleteBookmark(item.ID);
         }
     }
 }
