@@ -33,6 +33,7 @@ namespace WebBrowser.UI
             this.SearchHistoryTextBox = new System.Windows.Forms.TextBox();
             this.SearchHistoryButton = new System.Windows.Forms.Button();
             this.DeleteHistoryButton = new System.Windows.Forms.Button();
+            this.ClearHistoryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HistoryListBox
@@ -47,16 +48,17 @@ namespace WebBrowser.UI
             // 
             // SearchHistoryTextBox
             // 
-            this.SearchHistoryTextBox.Location = new System.Drawing.Point(580, 405);
+            this.SearchHistoryTextBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.SearchHistoryTextBox.Location = new System.Drawing.Point(592, 0);
             this.SearchHistoryTextBox.Name = "SearchHistoryTextBox";
             this.SearchHistoryTextBox.Size = new System.Drawing.Size(208, 22);
             this.SearchHistoryTextBox.TabIndex = 1;
             // 
             // SearchHistoryButton
             // 
-            this.SearchHistoryButton.Location = new System.Drawing.Point(499, 405);
+            this.SearchHistoryButton.Location = new System.Drawing.Point(681, 39);
             this.SearchHistoryButton.Name = "SearchHistoryButton";
-            this.SearchHistoryButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchHistoryButton.Size = new System.Drawing.Size(107, 30);
             this.SearchHistoryButton.TabIndex = 2;
             this.SearchHistoryButton.Text = "Search";
             this.SearchHistoryButton.UseVisualStyleBackColor = true;
@@ -64,19 +66,30 @@ namespace WebBrowser.UI
             // 
             // DeleteHistoryButton
             // 
-            this.DeleteHistoryButton.Location = new System.Drawing.Point(25, 404);
+            this.DeleteHistoryButton.Location = new System.Drawing.Point(681, 91);
             this.DeleteHistoryButton.Name = "DeleteHistoryButton";
-            this.DeleteHistoryButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteHistoryButton.Size = new System.Drawing.Size(107, 30);
             this.DeleteHistoryButton.TabIndex = 3;
             this.DeleteHistoryButton.Text = "Delete";
             this.DeleteHistoryButton.UseVisualStyleBackColor = true;
             this.DeleteHistoryButton.Click += new System.EventHandler(this.DeleteHistoryButton_Click);
+            // 
+            // ClearHistoryButton
+            // 
+            this.ClearHistoryButton.Location = new System.Drawing.Point(681, 140);
+            this.ClearHistoryButton.Name = "ClearHistoryButton";
+            this.ClearHistoryButton.Size = new System.Drawing.Size(107, 30);
+            this.ClearHistoryButton.TabIndex = 4;
+            this.ClearHistoryButton.Text = "Clear History";
+            this.ClearHistoryButton.UseVisualStyleBackColor = true;
+            this.ClearHistoryButton.Click += new System.EventHandler(this.ClearHistoryButton_Click);
             // 
             // HistoryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ClearHistoryButton);
             this.Controls.Add(this.DeleteHistoryButton);
             this.Controls.Add(this.SearchHistoryButton);
             this.Controls.Add(this.SearchHistoryTextBox);
@@ -95,5 +108,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.TextBox SearchHistoryTextBox;
         private System.Windows.Forms.Button SearchHistoryButton;
         private System.Windows.Forms.Button DeleteHistoryButton;
+        private System.Windows.Forms.Button ClearHistoryButton;
     }
 }

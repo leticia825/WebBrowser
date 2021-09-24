@@ -45,18 +45,30 @@ namespace WebBrowser.UI
 
         private void DeleteHistoryButton_Click(object sender, EventArgs e)
         {
-            if (HistoryListBox.Items.Count <= 0)
+            if (HistoryListBox.Items.Count <= 0) //nothing listed
             {
                 MessageBox.Show("Nothing to delete.");
                 return;
             }
 
+            if(HistoryListBox.SelectedIndex == -1) //nothing selected
+            {
+                MessageBox.Show("Nothing selected to delete.");
+                return;
+            }
+
             var h = HistoryManager.GetItem();
-            HistoryManager.DeleteHistoryItem(h[HistoryListBox.SelectedIndex]);
+            HistoryManager.DeleteHistoryItem(h[HistoryListBox.SelectedIndex]); 
             HistoryManagerForm_Load(sender, e); 
+        }
+
+        private void ClearHistoryButton_Click(object sender, EventArgs e)
+        {
+            for (int i = HistoryListBox.Items.Count - 1; i >= 0; --i)
+            {
+                HistoryListBox.Items.RemoveAt(i);
+            }
         } 
-
-
     }//end partial
 }
 

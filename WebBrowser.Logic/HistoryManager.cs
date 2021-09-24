@@ -59,15 +59,5 @@ namespace WebBrowser.Logic
             adapter.DeleteHistory(item.ID);
         }
 
-
-        //public void DeleteHistoryAll() //no params needed right?
-        //{
-        //    foreach(var item in GetItem()) 
-        //    {
-        //        DeleteHistoryItem(item);
-        //    }
-        //}
-
-
-    }
+    } //end class
 }
