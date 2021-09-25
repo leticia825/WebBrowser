@@ -40,6 +40,7 @@ namespace WebBrowser.UI
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageBookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
@@ -60,7 +61,7 @@ namespace WebBrowser.UI
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1021, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1021, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.menuStrip1_KeyDown);
@@ -75,7 +76,7 @@ namespace WebBrowser.UI
             this.toolStripSeparator1,
             this.exitWebBrowserToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newTabToolStripMenuItem
@@ -123,31 +124,39 @@ namespace WebBrowser.UI
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageHistoryToolStripMenuItem,
-            this.manageBookmarksToolStripMenuItem});
+            this.manageBookmarksToolStripMenuItem,
+            this.clearHistoryToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // manageHistoryToolStripMenuItem
             // 
             this.manageHistoryToolStripMenuItem.Name = "manageHistoryToolStripMenuItem";
-            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.manageHistoryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.manageHistoryToolStripMenuItem.Text = "Manage &History";
             this.manageHistoryToolStripMenuItem.Click += new System.EventHandler(this.manageHistoryToolStripMenuItem_Click);
             // 
             // manageBookmarksToolStripMenuItem
             // 
             this.manageBookmarksToolStripMenuItem.Name = "manageBookmarksToolStripMenuItem";
-            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.manageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.manageBookmarksToolStripMenuItem.Text = "Manage &Bookmarks";
             this.manageBookmarksToolStripMenuItem.Click += new System.EventHandler(this.manageBookmarksToolStripMenuItem_Click);
+            // 
+            // clearHistoryToolStripMenuItem
+            // 
+            this.clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
+            this.clearHistoryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clearHistoryToolStripMenuItem.Text = "&Clear History";
+            this.clearHistoryToolStripMenuItem.Click += new System.EventHandler(this.clearHistoryToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -162,10 +171,10 @@ namespace WebBrowser.UI
             // 
             this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(0, 30);
+            this.tabControl2.Location = new System.Drawing.Point(0, 28);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1021, 397);
+            this.tabControl2.Size = new System.Drawing.Size(1021, 399);
             this.tabControl2.TabIndex = 4;
             // 
             // tabPage2
@@ -174,7 +183,7 @@ namespace WebBrowser.UI
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1013, 368);
+            this.tabPage2.Size = new System.Drawing.Size(1013, 370);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -184,7 +193,7 @@ namespace WebBrowser.UI
             this.menuToolStrip4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuToolStrip4.Location = new System.Drawing.Point(3, 3);
             this.menuToolStrip4.Name = "menuToolStrip4";
-            this.menuToolStrip4.Size = new System.Drawing.Size(1007, 362);
+            this.menuToolStrip4.Size = new System.Drawing.Size(1007, 364);
             this.menuToolStrip4.TabIndex = 0;
             this.menuToolStrip4.Load += new System.EventHandler(this.menuToolStrip4_Load);
             // 
@@ -228,5 +237,6 @@ namespace WebBrowser.UI
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage2;
         private MenuToolStrip menuToolStrip4;
+        private System.Windows.Forms.ToolStripMenuItem clearHistoryToolStripMenuItem;
     }
 }

@@ -103,11 +103,10 @@ namespace WebBrowser.UI
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox HistoryListBox;
         private System.Windows.Forms.TextBox SearchHistoryTextBox;
         private System.Windows.Forms.Button SearchHistoryButton;
         private System.Windows.Forms.Button DeleteHistoryButton;
         private System.Windows.Forms.Button ClearHistoryButton;
+        private System.Windows.Forms.ListBox HistoryListBox;
     }
 }

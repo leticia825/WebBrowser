@@ -62,13 +62,22 @@ namespace WebBrowser.UI
             HistoryManagerForm_Load(sender, e); 
         }
 
-        private void ClearHistoryButton_Click(object sender, EventArgs e)
+        public void ClearHistoryButton_Click(object sender, EventArgs e) ///change from private to public
         {
+            DialogResult sure = MessageBox.Show("Delete everything?", "Clear History", MessageBoxButtons.YesNo);
+
+            if (sure == DialogResult.No)
+            {
+                return;    
+            }
+
             for (int i = HistoryListBox.Items.Count - 1; i >= 0; --i)
             {
-                HistoryListBox.Items.RemoveAt(i);
+                // use ++ to bypass second conditional statement of DeleteHistoryButton_Click()
+                ++HistoryListBox.SelectedIndex; 
+                DeleteHistoryButton_Click(sender, e);
             }
-        } 
+        }
     }//end partial
 }
 

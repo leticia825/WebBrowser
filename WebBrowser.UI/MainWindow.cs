@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-
 namespace WebBrowser.UI
 {
     public partial class MainWindow : Form
@@ -63,6 +62,13 @@ namespace WebBrowser.UI
             itemForm.ShowDialog();
         }
 
+        private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)////////////////////////////////////////////
+        {
+            var hmf = new HistoryManagerForm();
+            hmf.Show();
+            hmf.ClearHistoryButton_Click(sender, e);
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Howdy! Howdy!\n\nThis web browser was made and is maintained"
@@ -77,20 +83,19 @@ namespace WebBrowser.UI
         }
 
 
-        ////////////////////////////////////
-        /////// Empty methods below ////////
 
-
-       
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            ////// BACK BUTTON. VS WON'T RENAME METHOD //////
-        }
+        /////////////////////////////////////////////////////////////////////////
+        ////////////////////////// Empty methods below //////////////////////////
+        
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             //is the white space inside TabPage
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ////// BACK BUTTON. VS WON'T RENAME METHOD //////
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
@@ -153,6 +158,6 @@ namespace WebBrowser.UI
            
         }
 
-
+ 
     }
 }
