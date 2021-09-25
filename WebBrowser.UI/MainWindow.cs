@@ -82,82 +82,39 @@ namespace WebBrowser.UI
                 + "\nhttps://github.com/leticia825");
         }
 
-
-
         /////////////////////////////////////////////////////////////////////////
         ////////////////////////// Empty methods below //////////////////////////
-        
+
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-            //is the white space inside TabPage
-        }
+        { } //is the white space inside TabPage
 
         private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            ////// BACK BUTTON. VS WON'T RENAME METHOD //////
-        }
+        { } //BACK BUTTON. VS WON'T RENAME METHOD //    
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
+        private void toolStripButton1_Click_1(object sender, EventArgs e) { }
 
-        }
+        private void webAdressBox_KeyDown(object sender, KeyEventArgs e) { }
 
-        private void webAdressBox_KeyDown(object sender, KeyEventArgs e)
-        {
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        }
+        private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void printPageToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        }
+        private void ForwardButton_Click(object sender, EventArgs e) { }
 
-        private void savePageAsHTMLToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void RefreshButton_Click(object sender, EventArgs e) { }
 
-        }
+        private void HomeButton_Click(object sender, EventArgs e) { }
 
-        private void printPageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void BookmarkButton_Click(object sender, EventArgs e) { }
 
-        }
+        private void AddressTextbox_Click(object sender, EventArgs e) { }
 
-        private void ForwardButton_Click(object sender, EventArgs e)
-        {
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e) { }
 
-        }
-
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BookmarkButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddressTextbox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuToolStrip4_Load(object sender, EventArgs e)
-        {
-           
-        }
-
+        private void menuToolStrip4_Load(object sender, EventArgs e) { }
  
     }
 }

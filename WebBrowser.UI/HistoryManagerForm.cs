@@ -62,9 +62,15 @@ namespace WebBrowser.UI
             HistoryManagerForm_Load(sender, e); 
         }
 
-        public void ClearHistoryButton_Click(object sender, EventArgs e) ///change from private to public
+        public void ClearHistoryButton_Click(object sender, EventArgs e) ///changed from private to public
         {
-            DialogResult sure = MessageBox.Show("Delete everything?", "Clear History", MessageBoxButtons.YesNo);
+            if (HistoryListBox.Items.Count <= 0) //nothing listed
+            {
+                MessageBox.Show("Nothing to clear.");
+                return;
+            }
+
+            DialogResult sure = MessageBox.Show("Are you sure?", "Clear History", MessageBoxButtons.YesNo);
 
             if (sure == DialogResult.No)
             {

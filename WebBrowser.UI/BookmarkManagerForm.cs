@@ -20,7 +20,6 @@ namespace WebBrowser.UI
 
         private void BookmarkManagerForm_Load(object sender, EventArgs e)
         {
-            
             var items = BookmarkManager.GetItems();
             BookmarkListBox.Items.Clear();
 
