@@ -76,20 +76,29 @@ namespace WebBrowser.UI
 
         private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
-            if (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum)
+            do
             {
                 toolStripStatusLabel1.Text = "Loading";
-                while (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum)
-                {
-                    this.toolStripProgressBar1.Value++;
-                }
-            }
+                this.toolStripProgressBar1.Value++;
+            } while (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum);
 
-            else
-            {
-                toolStripStatusLabel1.Text = "Done";
-                this.toolStripProgressBar1.Value = 0;
-            }
+            toolStripStatusLabel1.Text = "Done";
+            this.toolStripProgressBar1.Value = 0;
+
+            //if (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum)
+            //{
+            //    toolStripStatusLabel1.Text = "Loading";
+            //    while (this.toolStripProgressBar1.Value < this.toolStripProgressBar1.Maximum)
+            //    {
+            //        this.toolStripProgressBar1.Value++;
+            //    }
+            //}
+
+            //else
+            //{
+            //    toolStripStatusLabel1.Text = "Done";
+            //    this.toolStripProgressBar1.Value = 0;
+            //}
 
             return;
         }
@@ -103,9 +112,14 @@ namespace WebBrowser.UI
 
             HistoryManager.AddItem(item);
 
-            //try { AddressTextbox.Text = webBrowser1.Url.ToString(); }
-            //catch (Exception nu) { return; }
-            // UPDATES ADDRESSTEXTBOX BUT BREAKS: System.Data.ConstraintException on BookmarkButton_Click
+            try 
+            { 
+                AddressTextbox.Text = webBrowser1.Url.ToString(); 
+            }
+            catch (Exception nu) 
+            {
+                return; 
+            }
 
             // How to clear time? What a concept. DateTime is non-nullable.
             item.URL = "";

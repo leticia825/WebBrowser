@@ -451,9 +451,9 @@ namespace WebBrowser.Data {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnURL.AllowDBNull = false;
-                this.columnURL.MaxLength = 50;
+                this.columnURL.MaxLength = 50000;
                 this.columnTitle.AllowDBNull = false;
-                this.columnTitle.MaxLength = 50;
+                this.columnTitle.MaxLength = 50000;
                 this.columnDate.AllowDBNull = false;
             }
             

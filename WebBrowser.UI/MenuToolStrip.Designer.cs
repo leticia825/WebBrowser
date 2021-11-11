@@ -79,7 +79,7 @@ namespace WebBrowser.UI
             this.ForwardButton.Image = ((System.Drawing.Image)(resources.GetObject("ForwardButton.Image")));
             this.ForwardButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.ForwardButton.Name = "ForwardButton";
-            this.ForwardButton.Size = new System.Drawing.Size(29, 28);
+            this.ForwardButton.Size = new System.Drawing.Size(29, 24);
             this.ForwardButton.Text = "Go Forward";
             this.ForwardButton.Click += new System.EventHandler(this.ForwardButton_Click);
             // 
@@ -89,7 +89,7 @@ namespace WebBrowser.UI
             this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
             this.RefreshButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(29, 28);
+            this.RefreshButton.Size = new System.Drawing.Size(29, 24);
             this.RefreshButton.Text = "Refresh Page";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
@@ -99,14 +99,14 @@ namespace WebBrowser.UI
             this.HomeButton.Image = ((System.Drawing.Image)(resources.GetObject("HomeButton.Image")));
             this.HomeButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(29, 28);
+            this.HomeButton.Size = new System.Drawing.Size(29, 24);
             this.HomeButton.Text = "Go Home";
             // 
             // AddressTextbox
             // 
             this.AddressTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddressTextbox.Name = "AddressTextbox";
-            this.AddressTextbox.Size = new System.Drawing.Size(350, 31);
+            this.AddressTextbox.Size = new System.Drawing.Size(350, 27);
             this.AddressTextbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressTextbox_KeyDown);
             this.AddressTextbox.Click += new System.EventHandler(this.AddressTextbox_Click);
             // 
@@ -116,7 +116,7 @@ namespace WebBrowser.UI
             this.GoButton.Image = ((System.Drawing.Image)(resources.GetObject("GoButton.Image")));
             this.GoButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(29, 28);
+            this.GoButton.Size = new System.Drawing.Size(29, 24);
             this.GoButton.Text = "Go to website";
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
@@ -126,7 +126,7 @@ namespace WebBrowser.UI
             this.BookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("BookmarkButton.Image")));
             this.BookmarkButton.ImageTransparentColor = System.Drawing.Color.LavenderBlush;
             this.BookmarkButton.Name = "BookmarkButton";
-            this.BookmarkButton.Size = new System.Drawing.Size(29, 28);
+            this.BookmarkButton.Size = new System.Drawing.Size(29, 24);
             this.BookmarkButton.Text = "Bookmark";
             this.BookmarkButton.Click += new System.EventHandler(this.BookmarkButton_Click);
             // 
@@ -136,6 +136,7 @@ namespace WebBrowser.UI
             this.webBrowser1.Location = new System.Drawing.Point(0, 27);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(953, 468);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
